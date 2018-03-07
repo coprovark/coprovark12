@@ -17,5 +17,5 @@ Route::get('/', function () {
 
 
 Route::get('game', function () {
-    return view('hello');
+    return view('Pro');
 });
