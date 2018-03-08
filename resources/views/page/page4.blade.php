@@ -1,10 +1,14 @@
+@extends('layouts.main')
 
+@section('title', 'Page Title')
+
+@section('content')
+    
 <html>
 <head>
 <style>
 div {
-    border: 4px solid black;
-    
+    border: 1px solid black;
     background-color: lightblue;
     margin: 80px 150px;
 }
@@ -22,4 +26,4 @@ div {
 </div>
 </body>
 </html>
-
+@endsection
