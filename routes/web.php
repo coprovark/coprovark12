@@ -31,12 +31,18 @@ Route::get('/page2', function () {
 });
 
 Route::get('/page3', function () {
-    return view('page/page3');
+    $array=["NUMBER"=>""];
+    return view('page/page3',$array);
 });
 
 Route::get('/page4', function () {
     return view('page/page4');
 });
+
+Route::get('/page5', function () {
+    return view('page/page5');
+});
+
 
 Route::get('/page10/{id}', function ($id) {
     $array=[
@@ -45,4 +51,13 @@ Route::get('/page10/{id}', function ($id) {
     return view('page.page10',$array);
 });
 
+Route::get('/form_register', function () {
+    return view('page/form_register');
+});
+Route::get('/login', function () {
+    return view('page/login');
+});
+
 Route::post('/page','PageController@show');
+Route::post('/page11','PageController@show_select');
+Route::post('/page12','PageController@show_pass');

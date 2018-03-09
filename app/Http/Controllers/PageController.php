@@ -13,14 +13,23 @@ class PageController extends Controller
     public function show(Request $request)
     {
         $txtname = $request->input('name');
-        $txtradio = $request->input('radio');
-        $txtcheckbox = $request->input('checkbox');
-        $txthidden = $request->input('hidden');
+        $txtradio = $request->input('sex');
+        $txtcheckbox = $request->input('price');
+    
+        $txtnum=$request->input('number');
 
         $array=["NAME"=>$txtname,
-        "ID"=>$txthidden,
+        "ID"=>$txtname,
         "GEN"=>$txtradio,
         "PRICE"=>$txtcheckbox];
         return view('page.page1',$array);
+    }
+    public function show_select(Request $res){
+        return view('page.page11',$res);
+    }
+    public function show_pass(Request $request){
+        $txtpass=$request->input('pass');
+        $array=["pass"=>$txtpass];
+        return view('page.page12',$array);
     }
 }

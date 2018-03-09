@@ -4,13 +4,13 @@
 
 @section('content')
     <form action="/page" method="post">
-    <input type="text" name="name">
-    <input type="checkbox" name="checkbox" value="1500">
-    <input type="checkbox" name="checkbox" value="2500">
-    <input type="hidden" name="hidden" value="20"><br>
+    <input type="textarea" name="name">
+    <input type="checkbox" name="price" value="1500">
+    <input type="checkbox" name="price" value="2500">
+    <input type="password" name="year" value=""><br>
     เพศ:
-    <input type="radio" name="radio" value="ผู้">ผู้
-    <input type="radio" name="radio" value="เมีย">เมีย<br>
+    <input type="radio" name="sex" value="ผู้">ผู้
+    <input type="radio" name="sex" value="เมีย">เมีย<br>
     <input type="submit" value="ส่งค่า">
     </form>
 
