@@ -51,13 +51,21 @@ Route::get('/page10/{id}', function ($id) {
     return view('page.page10',$array);
 });
 
-Route::get('/form_register', function () {
-    return view('page/form_register');
-});
-Route::get('/login', function () {
-    return view('page/login');
-});
+
+
+
 
 Route::post('/page','PageController@show');
 Route::post('/page11','PageController@show_select');
 Route::post('/page12','PageController@show_pass');
+
+
+Route::get('/form_register', function () {
+    return view('page.form_register');
+});
+
+Route::post('/page','PageController@ShowLogin');
+Route::get('/form_login', function () {
+    $data = ["USER"=>"",'PASSWORD'=>""];
+    return view('page.form_login',$data);
+});

@@ -32,4 +32,11 @@ class PageController extends Controller
         $array=["pass"=>$txtpass];
         return view('page.page12',$array);
     }
+    public function ShowLogin(Request $request)
+    {
+        $txtUser = $request->input('user');
+        $txtPassword = $request->input('password');
+        $data = ["USER"=>$txtUser,"PASSWORD"=>$txtPassword];
+        return view('page.form_login',$data);
+    }
 }
