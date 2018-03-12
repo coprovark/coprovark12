@@ -4,12 +4,12 @@
 <h1 class="page-header">เข้าสู่ระบบ</h1>
 <form action="/page" method="post">
 
-    <div class="form-group" style="width:30%">
+    <div class="form-group" style="width:60%">
         <label>User</label>
         <input type="text" class="form-control" placeholder="User" name="user" >
     </div>
 
-    <div class="form-group" style="width:30%">
+    <div class="form-group" style="width:60%">
         <label>Password</label>
         <input type="password" class="form-control" placeholder="Password" name="password" >
     </div>

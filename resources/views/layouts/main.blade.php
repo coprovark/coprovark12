@@ -73,7 +73,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="/login"><i class="fa fa-table fa-fw"></i>เข้าสู่ระบบ</a>
+                            <a href="/form_login"><i class="fa fa-table fa-fw"></i>เข้าสู่ระบบ</a>
                         </li>
                         <li>
                             <a href="/form_register"><i class="fa fa-table fa-fw"></i>สมัครสมาชิก</a>
