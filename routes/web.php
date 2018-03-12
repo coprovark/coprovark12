@@ -69,3 +69,37 @@ Route::get('/form_login', function () {
     $data = ["USER"=>"",'PASSWORD'=>""];
     return view('page.form_login',$data);
 });
+
+Route::get('/form_check_login', function () {
+    $data=[
+            'users'=>[]
+    ];
+    return view('page.form_check_login',$data);
+});
+Route::post('/form_check_login','PageController@form_check_login');
+
+
+Route::get('/form_login', function () {
+    $data=[
+            'users'=>[]
+    ];
+    return view('page.form_login',$data);
+});
+Route::post('/form_login','PageController@form_login');
+
+
+
+
+Route::get('/form_login2', function () {
+    $data = ['username' => '',
+             'name'=>''];
+    return view('page.form_login',$data);
+});
+Route::post('/form_login2','PageController@form_login2');
+
+
+
+// Route::get('/list_users',function(){
+//         return view('page.list_users');
+// });
+Route::get('/list_users','UsersController@list_users');

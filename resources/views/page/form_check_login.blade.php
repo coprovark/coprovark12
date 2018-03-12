@@ -1,8 +1,7 @@
-@extends('layouts.main')
-
-@section('content')
-<h1 class="page-header">เข้าสู่ระบบ</h1>
-<form action="/form_login2" method="post">
+<!-- Route       : form_check_login
+Controller  : form_check_login
+view        : form_check_login.blade.php -->
+<form action="/form_check_login" method="post">
 
     <div class="form-group" style="width:60%">
         <label>User</label>
@@ -17,9 +16,7 @@
     <button type="submit" class="btn btn-success">เข้าสู่ระบบ</button>
     
 </form>
-    
-
 <hr>
-username = {{$username}}<br>
-ID = {{$name}}
-@endsection
+@foreach ($users as $user) 
+    {{ $user->id }}
+@endforeach
