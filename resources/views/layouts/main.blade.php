@@ -81,6 +81,9 @@
                         <li>
                             <a href="/list_users"><i class="fa fa-table fa-fw"></i>สมาชิก</a>
                         </li>
+                        <li>
+                            <a href="/std_show"><i class="fa fa-table fa-fw"></i> ข้อมูลนักศึกษา</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -121,6 +124,15 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/sb-admin-2.js"></script>
 
+    <script language="javascript">
+    function calAge(o)
+    {
+        var tmp = o.value.split("-");
+        var current = new Date();
+        var current_year = current.getFullYear();
+        document.getElementById("age").value = current_year - tmp[0];
+    }       
+    </script>
 </body>
 
 </html>

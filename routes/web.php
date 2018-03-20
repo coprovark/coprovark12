@@ -114,3 +114,17 @@ Route::get('/delete_user/{id}','UsersController@delete_users');
 Route::post('/form_register_save','UsersController@form_register_save');
 
 Route::post('/list_users_find','UsersController@list_users_find');
+//-------------------------------------------------------//
+
+
+Route::get('/std_form', function () {
+    return view('page.std_form');
+});
+//หน้าแสดงข้อมูลนักศึกษา
+Route::get('/std_show', function () {
+    return view('page.std_show');
+});
+Route::get('/std_show','UsersController@std_show');//แสดงผลในตาราง
+Route::get('/delete_std/{id}','UsersController@delete_std');//ลบ
+Route::get('/save_std','UsersController@save_std');//เพิ่ม
+Route::post('/find_std','UsersController@find_std');//ค้นหา

@@ -32,6 +32,8 @@
         <td>{{$item->password}}</td>
         <td>{{$item->status}}</td>
         <td><button type="button" class="btn btn-info">Edit</button></td>
+
+        
         <td><button type="button" class="btn btn-danger" onclick="return _confirm('{{ $item->id }}')">
                     <span class="glyphicon glyphicon-remove"></span>  
                     ลบรายการ
