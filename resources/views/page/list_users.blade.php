@@ -31,9 +31,7 @@
         <td>{{$item->username}}</td>
         <td>{{$item->password}}</td>
         <td>{{$item->status}}</td>
-        <td><button type="button" class="btn btn-info">Edit</button></td>
-
-        
+        <td><a href="/list_user_edit/{{$item->id}}" class="btn btn-info">Edit</a></td>
         <td><button type="button" class="btn btn-danger" onclick="return _confirm('{{ $item->id }}')">
                     <span class="glyphicon glyphicon-remove"></span>  
                     ลบรายการ

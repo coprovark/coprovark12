@@ -12,16 +12,16 @@
     <title>webapp</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap/css/bootstrap.min.css') }}">
 
     <!-- MetisMenu CSS -->
-    <link href="css/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ URL::asset('css/metisMenu/metisMenu.min.css') }}">
 
     <!-- Custom CSS -->
-    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ URL::asset('css/sb-admin-2.css') }}">
 
     <!-- Custom Fonts -->
-    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ URL::asset('css/font-awesome/css/font-awesome.min.css') }}">
 
 
 </head>
@@ -61,28 +61,31 @@
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> CO-PROVARK<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">Flot Charts</a>
+                                    <a href="/co_register"> สมัครสมาชิก</a>
                                 </li>
                                 <li>
-                                    <a href="morris.html">Morris.js Charts</a>
+                                    <a href="/co_member">สมาชิก</a>
                                 </li>
                             </ul>
-                            <!-- /.nav-second-level -->
+                            
                         </li>
                         <li>
-                            <a href="/form_login"><i class="fa fa-table fa-fw"></i>เข้าสู่ระบบ</a>
+                            <a href="/form_login2"><i class="fa fa-table fa-fw"></i> เข้าสู่ระบบ</a>
                         </li>
                         <li>
-                            <a href="/form_register"><i class="fa fa-table fa-fw"></i>สมัครสมาชิก</a>
+                            <a href="/form_register"><i class="fa fa-table fa-fw"></i> สมัครสมาชิก</a>
                         </li>
                         <li>
-                            <a href="/list_users"><i class="fa fa-table fa-fw"></i>สมาชิก</a>
+                            <a href="/list_users"><i class="fa fa-table fa-fw"></i> สมาชิก</a>
                         </li>
                         <li>
-                            <a href="/std_show"><i class="fa fa-table fa-fw"></i> ข้อมูลนักศึกษา</a>
+                            <a href="/std_form"> บันทึกข้อมูลนักศึกษา</a>
+                        </li>
+                        <li>
+                            <a href="/std_show"> แสดงข้อมูลนักศึกษา</a>
                         </li>
                     </ul>
                 </div>
@@ -96,9 +99,9 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                       
+                        
+                        
                         @yield('content')
-
 
                     </div>
                     <!-- /.col-lg-12 -->
@@ -124,15 +127,6 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/sb-admin-2.js"></script>
 
-    <script language="javascript">
-    function calAge(o)
-    {
-        var tmp = o.value.split("-");
-        var current = new Date();
-        var current_year = current.getFullYear();
-        document.getElementById("age").value = current_year - tmp[0];
-    }       
-    </script>
 </body>
 
 </html>
